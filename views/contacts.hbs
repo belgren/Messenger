@@ -1,0 +1,30 @@
+<h3>Contacts</h3>
+<div class="logout-link">
+  <a href="./logout">Logout</a>
+</div>
+<div class="form-group" id="contacts">
+
+  {{#each contacts}}
+    <div class="container" id="contact">
+      <div id="name">{{this.name}}</div>
+      <div id="number">{{this.phone}}</div>
+      <form class="sendText contact-btn" action="/messages/send/{{this._id}}" method="get">
+        <button type="submit" name="sendText">Send Text</button>
+      </form>
+      <form class="viewMessages contact-btn" action="/messages/{{this._id}}" method="get">
+        <button type="submit" name="viewMessages">View Messages</button>
+      </form>
+      <form class="editContact contact-btn" action="/contacts/{{this._id}}" method="get">
+        <button type="submit" name="editContact">Edit Contact</button>
+      </form>
+    </div>
+
+  {{/each}}
+</div>
+
+<form class="addContact" action="/contacts/new" method="GET">
+  <button type="submit" name="addContact"><i class="glyphicon glyphicon-plus"></i> Add Contact</button>
+</form>
+<form class="viewAllMessages" action="/messages" method="get">
+  <button type="submit" name="viewAllMessages">View All Messages</button>
+</form>

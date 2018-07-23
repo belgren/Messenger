@@ -1,0 +1,9 @@
+<form class="messages" action="/messages" method="get">
+  <h1>Your Conversation Stream</h1>
+    {{#each messages}}
+        <div class="container">
+          Sent to {{this.contact}} at: {{this.created}}<br>
+          {{this.content}}
+        </div><br>
+    {{/each}}
+</form>

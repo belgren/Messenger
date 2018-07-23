@@ -1,0 +1,44 @@
+/* YOUR STYLES HERE */
+#contact{
+  padding-top: 15px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  border: solid 1px black;
+  padding-bottom: 15px;
+  background-color: rgba(0,0,0,.05);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 50%
+}
+
+
+#contacts{
+  display: block;
+}
+
+.contact-btn{
+  margin-left: 10px;
+}
+
+.addContact{
+  margin-bottom: 10px;
+}
+
+#name{
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.logout-link{
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
+.deleteContact{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 170px;
+}
